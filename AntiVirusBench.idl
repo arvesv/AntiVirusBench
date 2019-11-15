@@ -1,0 +1,29 @@
+// AntiVirusBench.idl : type library source for AntiVirusBench.exe
+
+// This file will be processed by the MIDL compiler to produce the
+// type library (AntiVirusBench.tlb).
+
+[ uuid(2a999985-53a9-4b31-abc0-b2fdf0e9c71d), version(1.0) ]
+library AntiVirusBench
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	//  Primary dispatch interface for CAntiVirusBenchDoc
+
+	[ uuid(ea6a859c-4176-42db-aa0d-8f7419b88902) ]
+	dispinterface IAntiVirusBench
+	{
+		properties:
+
+		methods:
+	};
+
+	//  Class information for CAntiVirusBenchDoc
+
+	[ uuid(b65dbf18-2cac-4d78-a2d4-1fb80084eb55) ]
+	coclass CAntiVirusBenchDoc
+	{
+		[default] dispinterface IAntiVirusBench;
+	};
+};

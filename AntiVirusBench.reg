@@ -1,0 +1,33 @@
+REGEDIT
+; This .REG file may be used by your SETUP program.
+;   If a SETUP program is not available, the entries below will be
+;   registered in your InitInstance automatically with a call to
+;   CWinApp::RegisterShellFileTypes and COleObjectFactory::UpdateRegistryAll.
+
+HKEY_CLASSES_ROOT\.azs = AntiVirusBench.Document
+HKEY_CLASSES_ROOT\AntiVirusBench.Document\shell\open\command = AntiVirusBench.EXE %1
+HKEY_CLASSES_ROOT\AntiVirusBench.Document\shell\open\ddeexec = [open("%1")]
+HKEY_CLASSES_ROOT\AntiVirusBench.Document\shell\open\ddeexec\application = AntiVirusBench
+    ; note: the application is optional
+    ;  (it defaults to the app name in "command")
+
+HKEY_CLASSES_ROOT\AntiVirusBench.Document = AntiVirusBench.Document
+
+
+HKEY_CLASSES_ROOT\AntiVirusBench.Document\protocol\StdFileEditing\server = AntiVirusBench.EXE
+HKEY_CLASSES_ROOT\AntiVirusBench.Document\protocol\StdFileEditing\verb\0 = &Edit
+HKEY_CLASSES_ROOT\AntiVirusBench.Document\Insertable =
+HKEY_CLASSES_ROOT\AntiVirusBench.Document\CLSID = {b65dbf18-2cac-4d78-a2d4-1fb80084eb55}
+
+HKEY_CLASSES_ROOT\CLSID\{b65dbf18-2cac-4d78-a2d4-1fb80084eb55} = AntiVirusBench.Document
+HKEY_CLASSES_ROOT\CLSID\{b65dbf18-2cac-4d78-a2d4-1fb80084eb55}\DefaultIcon = AntiVirusBench.EXE,1
+HKEY_CLASSES_ROOT\CLSID\{b65dbf18-2cac-4d78-a2d4-1fb80084eb55}\LocalServer32 = AntiVirusBench.EXE
+HKEY_CLASSES_ROOT\CLSID\{b65dbf18-2cac-4d78-a2d4-1fb80084eb55}\ProgId = AntiVirusBench.Document
+HKEY_CLASSES_ROOT\CLSID\{b65dbf18-2cac-4d78-a2d4-1fb80084eb55}\MiscStatus = 32
+HKEY_CLASSES_ROOT\CLSID\{b65dbf18-2cac-4d78-a2d4-1fb80084eb55}\AuxUserType\3 = AntiVirusBench
+HKEY_CLASSES_ROOT\CLSID\{b65dbf18-2cac-4d78-a2d4-1fb80084eb55}\AuxUserType\2 = AntiVirusBench
+HKEY_CLASSES_ROOT\CLSID\{b65dbf18-2cac-4d78-a2d4-1fb80084eb55}\Insertable =
+HKEY_CLASSES_ROOT\CLSID\{b65dbf18-2cac-4d78-a2d4-1fb80084eb55}\verb\1 = &Open,0,2
+HKEY_CLASSES_ROOT\CLSID\{b65dbf18-2cac-4d78-a2d4-1fb80084eb55}\verb\0 = &Edit,0,2
+HKEY_CLASSES_ROOT\CLSID\{b65dbf18-2cac-4d78-a2d4-1fb80084eb55}\InprocHandler32 = ole32.dll
+
